@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Team A"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/score1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/team1_3points"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:onClick="increase3points"
+                android:text="+3 point"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/team1_2points"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:onClick="increase2points"
+                android:text="+2 point"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/team1_free_throw"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:onClick="increase1points"
+                android:text="free throw"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Team B"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/score2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/team2_3points"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:onClick="increase3points"
+                android:text="+3 point"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/team2_2points"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:onClick="increase2points"
+                android:text="+2 point"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/team2_free_throw"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:onClick="increase1points"
+                android:text="free throw"
+                android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="Reset"
+        android:text="Reset"
+        android:textAllCaps="true"
+        android:textSize="15sp" />
+
+</RelativeLayout>
